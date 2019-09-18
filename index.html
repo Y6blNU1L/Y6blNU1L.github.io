@@ -16,7 +16,27 @@ if (isPassword) {
     error: '复制错误',
     noSupport: '浏览器不支持'
   }
-}</script></head><body><canvas id="universe"></canvas><!--#body--><div id="sidebar"><div class="author-info"><div class="author-info-avatar"><img class="author-info-avatar-img" src="/avatar.png"></div><div class="author-info-name">何帮安</div><div class="author-info-description">给她一个幸福的将来。</div><div class="links-buttons"><a class="links-button button-hover" href="https://github.com/hebangan" target="_blank">GitHub<i class="icon-dot bg-color1"></i></a><a class="links-button button-hover" href="mailto:1820500218@qq.com" target="_blank">E-Mail<i class="icon-dot bg-color3"></i></a><a class="links-button button-hover" href="tencent://message/?uin=1820500218&amp;Site=&amp;Menu=yes" target="_blank">QQ<i class="icon-dot bg-color4"></i></a></div><div class="author-info-articles"><a class="author-info-articles-archives article-meta" href="/archives"><span class="pull-top">日志</span><span class="pull-bottom">11</span></a><a class="author-info-articles-tags article-meta" href="/tags"><span class="pull-top">标签</span><span class="pull-bottom">10</span></a></div></div></div><div id="main-container"><header><div id="menu-outer"><i class="menu-list-icon fas fa-bars"></i><nav id="menu-inner"><a class="menu-item" href="/">首页</a><a class="menu-item" href="/tags">标签</a><a class="menu-item" href="/categories">分类</a><a class="menu-item" href="/archives">归档</a><a class="menu-item" href="/about">关于</a></nav><div class="right-info"><a class="title-name" href="/">何帮安的博客</a><span id="now-time"></span></div></div></header><div id="content-outer"><div id="content-inner"><div id="recent-posts"><!-- each post in page.posts.sort('date', -1).limit(10).toArray()--><!-- config中配置按照什么排序--><div class="recent-post-item"><a class="post-title" href="/2019/09/17/JS虚拟路径和虚拟主机/">2.2虚拟路径和虚拟主机</a><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 更新于 2019-09-17</time><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/tags/JavaWeb/">JavaWeb</a></div></div><div class="post-content"><div class="main-content content"><h2 id="虚拟路径和虚拟主机"><a href="#虚拟路径和虚拟主机" class="headerlink" title="虚拟路径和虚拟主机"></a>虚拟路径和虚拟主机</h2><h3 id="虚拟路径"><a href="#虚拟路径" class="headerlink" title="虚拟路径"></a>虚拟路径</h3><p>1.将web项目配置到webapps以外的目录。</p>
+}</script></head><body><canvas id="universe"></canvas><!--#body--><div id="sidebar"><div class="author-info"><div class="author-info-avatar"><img class="author-info-avatar-img" src="/avatar.png"></div><div class="author-info-name">何帮安</div><div class="author-info-description">给她一个幸福的将来。</div><div class="links-buttons"><a class="links-button button-hover" href="https://github.com/hebangan" target="_blank">GitHub<i class="icon-dot bg-color5"></i></a><a class="links-button button-hover" href="mailto:1820500218@qq.com" target="_blank">E-Mail<i class="icon-dot bg-color6"></i></a><a class="links-button button-hover" href="tencent://message/?uin=1820500218&amp;Site=&amp;Menu=yes" target="_blank">QQ<i class="icon-dot bg-color4"></i></a></div><div class="author-info-articles"><a class="author-info-articles-archives article-meta" href="/archives"><span class="pull-top">日志</span><span class="pull-bottom">13</span></a><a class="author-info-articles-tags article-meta" href="/tags"><span class="pull-top">标签</span><span class="pull-bottom">10</span></a></div></div></div><div id="main-container"><header><div id="menu-outer"><i class="menu-list-icon fas fa-bars"></i><nav id="menu-inner"><a class="menu-item" href="/">首页</a><a class="menu-item" href="/tags">标签</a><a class="menu-item" href="/categories">分类</a><a class="menu-item" href="/archives">归档</a><a class="menu-item" href="/about">关于</a></nav><div class="right-info"><a class="title-name" href="/">何帮安的博客</a><span id="now-time"></span></div></div></header><div id="content-outer"><div id="content-inner"><div id="recent-posts"><!-- each post in page.posts.sort('date', -1).limit(10).toArray()--><!-- config中配置按照什么排序--><div class="recent-post-item"><a class="post-title" href="/2019/09/18/Eclipse开发JSP/">4.4Eclipse开发JSP</a><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 更新于 2019-09-18</time><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/tags/JavaWeb/">JavaWeb</a></div></div><div class="post-content"><div class="main-content content"><h2 id="Eclipse开发JSP"><a href="#Eclipse开发JSP" class="headerlink" title="Eclipse开发JSP"></a>Eclipse开发JSP</h2><h3 id="在Eclipse中创建Web项目"><a href="#在Eclipse中创建Web项目" class="headerlink" title="在Eclipse中创建Web项目"></a>在Eclipse中创建Web项目</h3><h4 id="访问方式"><a href="#访问方式" class="headerlink" title="访问方式"></a>访问方式</h4><p>在浏览器中可以直接访问WebContent中的文件，</p>
+<p>例如localhost:8080/MyJspProject/index.jsp,</p>
+<p>其中的index.jsp就在WebContent目录中,</p>
+<p>但是WEB-INF中的文件无法通过客户端（浏览器）直接访问,</p>
+<p>只能通过请求转发来访问。</p>
+<p><strong>注意：并不是任何的内部跳转都能访问WEB-INF；原因是跳转有两种方式：请求转发和重定向</strong></p>
+<h4 id="配置tomcat运行时的环境"><a href="#配置tomcat运行时的环境" class="headerlink" title="配置tomcat运行时的环境"></a>配置tomcat运行时的环境</h4><p>jsp&lt;—&gt;servlet</p>
+<p><strong>a.将tomcat/lib中的servlet-api.jar到构件路径</strong></p>
+<p><strong>b. 右键项目 –&gt;Build Path –&gt;Add library –&gt;Server Runtime</strong></p>
+<h4 id="统一字符集编码"><a href="#统一字符集编码" class="headerlink" title="统一字符集编码"></a>统一字符集编码</h4><p>a.编码分类：</p>
+<p>设置jsp文件的编码（jsp文件的pageEncoding属性）： jsp–&gt;java</p>
+<p>设置浏览器读取jsp文件的编码（jsp中的content属性）</p>
+<p><strong>一般统一编码UTF-8</strong></p>
+<p>b.文本编码：</p>
+<p><strong>将整个Eclipse中的文件统一设置</strong></p>
+</div></div><a class="button-hover more" href="/2019/09/18/Eclipse开发JSP/#more">阅读全文</a></div><div class="recent-post-item"><a class="post-title" href="/2019/09/18/JSP执行流程/">3.3JSP执行流程</a><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 更新于 2019-09-18</time><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/tags/JavaWeb/">JavaWeb</a></div></div><div class="post-content"><div class="main-content content"><h2 id="JSP执行流程"><a href="#JSP执行流程" class="headerlink" title="JSP执行流程"></a>JSP执行流程</h2><p>第一次访问：</p>
+<p><strong>JSP —&gt;  JAVA  —&gt;  CLASS</strong></p>
+<p>第二次访问：</p>
+<p><strong>直接访问class文件（如果服务端代码修改，将会重新编译）</strong> </p>
+<p>JSP和Servlet可以相互转换</p>
+</div></div><a class="button-hover more" href="/2019/09/18/JSP执行流程/#more">阅读全文</a></div><div class="recent-post-item"><a class="post-title" href="/2019/09/17/JS虚拟路径和虚拟主机/">2.2虚拟路径和虚拟主机</a><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 更新于 2019-09-17</time><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/tags/JavaWeb/">JavaWeb</a></div></div><div class="post-content"><div class="main-content content"><h2 id="虚拟路径和虚拟主机"><a href="#虚拟路径和虚拟主机" class="headerlink" title="虚拟路径和虚拟主机"></a>虚拟路径和虚拟主机</h2><h3 id="虚拟路径"><a href="#虚拟路径" class="headerlink" title="虚拟路径"></a>虚拟路径</h3><p>1.将web项目配置到webapps以外的目录。</p>
 <p>2.在apache\conf\server.xml中的Host标签中添加上Context的标签偶爱an，</p>
 <p>其中属性有：</p>
 <blockquote>
@@ -298,80 +318,4 @@ if (isPassword) {
 <li>七、 参考文献 </li>
 <li>八、 附录</li>
 </ul>
-</div></div><a class="button-hover more" href="/2019/09/05/建模论文格式/#more">阅读全文</a></div><div class="recent-post-item"><a class="post-title" href="/2019/09/05/数据库命令/">数据库命令</a><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 更新于 2019-09-05</time><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/tags/数据库命令/">数据库命令</a></div></div><div class="post-content"><div class="main-content content"><h1 id="MySQL命令学习笔记"><a href="#MySQL命令学习笔记" class="headerlink" title="MySQL命令学习笔记"></a>MySQL命令学习笔记</h1><p><code>mysql -uroot  -p123456</code><br><code>create database &lt;库名&gt;character set gbk;</code><br><code>create table &lt;表名&gt;();</code><br><code>desc  &lt;表名&gt;;   //描述表字段数据类型</code><br><code>insert into &lt;表名&gt;(字段名) values(对应值);</code><br><code>select *from &lt;表名&gt;;</code><br><code>select  *from &lt;表名&gt; where &lt;条件&gt;;   //（*代表所列）</code></p>
-<p><code>update &lt;表名&gt; set 列名称=新值 where &lt;条件&gt;;    //当...时更新某列的值</code></p>
-<p><code>delete from &lt;表名&gt; where &lt;条件&gt;   //当...时删除一行</code></p>
-<p><code>alter table &lt;表名&gt; add &lt;列名&gt; &lt;列数据类型&gt;  //插入列</code></p>
-<figure class="highlight plain"><figcaption><span>table mytest add sname tinyint unsigned  not null default 0;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alter table mytest add snum smallint(5) zerfill not null default 0;</span><br><span class="line">	smallint(5) :snum这列数值统一补零，而且补到5位</span><br><span class="line"> 总结：smallint(M) ：M表示补0的宽度，和zerfill配合使用才有意义，并且同时是unsigned类型</span><br></pre></td></tr></table></figure>
-
-<p><code>alter table &lt;表名&gt; add &lt;列名&gt; &lt;列数据类型&gt; after &lt;插入某列的名&gt;   //在某列后面插入新的一列</code></p>
-<p><code>alter table &lt;表名&gt; change &lt;列名&gt; &lt;新列名&gt; &lt;列数据类型&gt;   //改变某列名称</code></p>
-<p><code>alter table &lt;表名&gt; drop &lt;列名&gt;     //删除某列</code></p>
-<p><code>alter table &lt;表名&gt; rename &lt;新表名&gt;   //重命名</code></p>
-<p><code>drop table &lt;表名&gt;;  //删除表</code></p>
-<p><code>drop databases &lt;表名&gt;;  //删除表</code></p>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">数据型			(1字节8bit)</span><br><span class="line">	整型				占据空间		存储范围</span><br><span class="line">	   Tinyint    	1字节		-128 至 127 , 0 至 255</span><br><span class="line">	   Smallint		2字节</span><br><span class="line">	   Mediuint		3字节</span><br><span class="line">	   int   		4字节</span><br><span class="line">	   bigint		8字节</span><br></pre></td></tr></table></figure>
-
-<hr>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">总结： 1个字节8个位 (无符号)  0           --&gt;    255  (2^8-1)</span><br><span class="line"></span><br><span class="line">				 (有符号) -128 (-2^7)   --&gt;    127  (2^7-1)</span><br></pre></td></tr></table></figure></div></div><a class="button-hover more" href="/2019/09/05/数据库命令/#more">阅读全文</a></div><div class="recent-post-item"><a class="post-title" href="/2019/09/05/MarkDownUser/">MarkDownUser</a><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 更新于 2019-09-05</time><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/tags/MarkDownUser/">MarkDownUser</a></div></div><div class="post-content"><div class="main-content content"><h1 id="学习怎么使用Typora"><a href="#学习怎么使用Typora" class="headerlink" title="学习怎么使用Typora"></a>学习怎么使用Typora</h1><h2 id="二级"><a href="#二级" class="headerlink" title="二级"></a>二级</h2><h3 id="三级"><a href="#三级" class="headerlink" title="三级"></a>三级</h3><h4 id="四级"><a href="#四级" class="headerlink" title="四级"></a>四级</h4><h5 id="五级"><a href="#五级" class="headerlink" title="五级"></a>五级</h5><h6 id="六级"><a href="#六级" class="headerlink" title="六级"></a>六级</h6><blockquote>
-<p>(&gt;)引用或者 （ctrl + shift + q）</p>
-</blockquote>
-<blockquote>
-<p><code>String name=&quot;hello(``)&quot;</code></p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#``` 使用</span><br><span class="line"></span><br><span class="line">header&#123;</span><br><span class="line">    display:block;</span><br><span class="line">    margin:0 auto;</span><br><span class="line">    width:200px;</span><br><span class="line">    text-align:center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><u>下划线(ctrl + u)</u></p>
-</blockquote>
-<blockquote>
-<p><del>删除线(alt + shift + 5)</del></p>
-</blockquote>
-<blockquote>
-<p><strong>字体加粗(ctrl + b)</strong></p>
-</blockquote>
-<blockquote>
-<p><em>字体倾斜(ctrl + i)</em></p>
-</blockquote>
-<ul>
-<li>1   （    -    +    space     +    enter    ）<ul>
-<li>2<ul>
-<li>3</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p><a href>baidu</a>   (ctrl +k)</p>
-</blockquote>
-<blockquote>
-<p><code>ctrl + home</code> 跳转至文章开头，<code>ctrl + end</code> 跳转至文章末尾</p>
-</blockquote>
-<blockquote>
-<p>按行选中 Ctrl+l</p>
-<p>快速搜索 ctrl+f</p>
-</blockquote>
-<blockquote>
-<p>快速生成表格  ctrl+t</p>
-</blockquote>
-<blockquote>
-<p>快速打开笔记  <code>ctrl+p</code>   </p>
-</blockquote>
-<blockquote>
-<p>英文状态下的引号，输入字母自动显示表情符号</p>
-</blockquote>
-<blockquote>
-<p>F11全屏</p>
-</blockquote>
-<blockquote>
-<p>新建文件 Ctrl+n</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>分割线（—  +enter）</p>
-</blockquote>
-<hr>
-</div></div><a class="button-hover more" href="/2019/09/05/MarkDownUser/#more">阅读全文</a></div></div><div id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-angle-right"></i></a></div></div></div></div><div class="button-hover" id="return-top"><i class="fas fa-arrow-up" aria-hidden="true"></i></div><footer><div id="footer"><div class="button-hover" id="side-button"><i class="fas fa-arrow-right"></i></div><div class="right-content"><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_uv"><i class="fas fa-user"></i></span><span id="busuanzi_value_site_uv"></span><span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv"><i class="fas fa-eye"></i></span><span id="busuanzi_value_site_pv"></span><span></span></div><div class="copyright">&copy;2017 ～ 2019 By 何帮安</div></div></div></footer></div><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/jquery-3.3.1.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/velocity.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/jquery.mCustomScrollbar.concat.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/fan.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/canvas_bg.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/utils.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/scroll.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/sidebar.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/copy.js"></script><!--script(src=url)--></body></html>
+</div></div><a class="button-hover more" href="/2019/09/05/建模论文格式/#more">阅读全文</a></div></div><div id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-angle-right"></i></a></div></div></div></div><div class="button-hover" id="return-top"><i class="fas fa-arrow-up" aria-hidden="true"></i></div><footer><div id="footer"><div class="button-hover" id="side-button"><i class="fas fa-arrow-right"></i></div><div class="right-content"><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_uv"><i class="fas fa-user"></i></span><span id="busuanzi_value_site_uv"></span><span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv"><i class="fas fa-eye"></i></span><span id="busuanzi_value_site_pv"></span><span></span></div><div class="copyright">&copy;2017 ～ 2019 By 何帮安</div></div></div></footer></div><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/jquery-3.3.1.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/velocity.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/jquery.mCustomScrollbar.concat.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/fan.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/canvas_bg.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/utils.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/scroll.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/sidebar.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/copy.js"></script><!--script(src=url)--></body></html>
