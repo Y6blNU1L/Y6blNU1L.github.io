@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="38.38EL表达语法"><meta name="keywords" content="JavaWeb"><meta name="author" content="何帮安,undefined"><meta name="copyright" content="何帮安"><title>38.38EL表达语法【何帮安的博客】</title><link rel="stylesheet" href="/css/fan.css"><link rel="stylesheet" href="/css/thirdparty/jquery.mCustomScrollbar.min.css"><link rel="icon" href="/favicon.ico"><!-- script(src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML")--><script src="/js/mathjax/mathjax.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+});
+</script><script>var isPassword = '' || false;
+if (isPassword) {
+    if (prompt('请输入文章密码') !== '') {
+        alert('密码错误！');
+        history.back();
+    }
+}</script><script>window.GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+}</script></head><body><canvas id="universe"></canvas><!--#body--><div id="sidebar"><div class="toggle-sidebar-info button-hover"><span data-toggle="文章目录">站点概览</span></div><div class="sidebar-toc"><div class="sidebar-toc-title">目录</div><div class="sidebar-toc-progress"><span class="progress-notice">您已阅读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc-progress-bar"></div></div><div class="sidebar-toc-content" id="sidebar-toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#EL表达语法"><span class="toc-number">1.</span> <span class="toc-text">EL表达语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#用法"><span class="toc-number">1.1.</span> <span class="toc-text">用法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#点操作符"><span class="toc-number">1.1.1.</span> <span class="toc-text">点操作符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#中括号操作符"><span class="toc-number">1.1.2.</span> <span class="toc-text">中括号操作符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#EL关系运算符"><span class="toc-number">1.1.3.</span> <span class="toc-text">EL关系运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#EL逻辑运算符"><span class="toc-number">1.1.4.</span> <span class="toc-text">EL逻辑运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#EL表达式的隐式对象"><span class="toc-number">1.1.5.</span> <span class="toc-text">EL表达式的隐式对象</span></a></li></ol></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info-avatar"><img class="author-info-avatar-img" src="/avatar.png"></div><div class="author-info-name">何帮安</div><div class="author-info-description">给她一个幸福的将来。</div><div class="links-buttons"><a class="links-button button-hover" href="https://github.com/hebangan" target="_blank">GitHub<i class="icon-dot bg-color2"></i></a><a class="links-button button-hover" href="mailto:1820500218@qq.com" target="_blank">E-Mail<i class="icon-dot bg-color9"></i></a><a class="links-button button-hover" href="tencent://message/?uin=1820500218&amp;Site=&amp;Menu=yes" target="_blank">QQ<i class="icon-dot bg-color4"></i></a></div><div class="author-info-articles"><a class="author-info-articles-archives article-meta" href="/archives"><span class="pull-top">日志</span><span class="pull-bottom">43</span></a><a class="author-info-articles-tags article-meta" href="/tags"><span class="pull-top">标签</span><span class="pull-bottom">14</span></a></div></div></div><div id="main-container"><header><div id="menu-outer"><i class="menu-list-icon fas fa-bars"></i><nav id="menu-inner"><a class="menu-item" href="/">首页</a><a class="menu-item" href="/tags">标签</a><a class="menu-item" href="/categories">分类</a><a class="menu-item" href="/archives">归档</a><a class="menu-item" href="/about">关于</a></nav><div class="right-info"><a class="title-name" href="/">何帮安的博客</a><span id="now-time"></span></div></div></header><div id="content-outer"><div id="content-inner"><article id="post"><div class="post-header"><div class="title">38.38EL表达语法</div><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 发表于 2019-12-09 | 更新于 2019-12-09</time><!--time.button-hover.post-date #[i.fas.fa-calendar-alt.article-icon(aria-hidden="true")] #[=__('post.modified')] #[=date(page['updated'], config.date_format)]--><div class="button-hover categories"></div><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/tags/JavaWeb/">JavaWeb</a></div></div></div><div class="main-content"><h2 id="EL表达语法"><a href="#EL表达语法" class="headerlink" title="EL表达语法"></a>EL表达语法</h2><p>传统的在JSP中用java代码显示数据的弊端：  类型转换、处理null、代码掺杂</p>
+<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><h4 id="点操作符"><a href="#点操作符" class="headerlink" title="点操作符"></a>点操作符</h4><blockquote>
+<p>${ 域对象. 域对象中的属性.属性.级联属性}</p>
+</blockquote>
+<h4 id="中括号操作符"><a href="#中括号操作符" class="headerlink" title="中括号操作符"></a>中括号操作符</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123; [&quot;域对象&quot;][&quot;域对象中的属性&quot;][&quot;属性&quot;][&quot;级联属性&quot;]&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="EL关系运算符"><a href="#EL关系运算符" class="headerlink" title="EL关系运算符"></a>EL关系运算符</h4><p><img src="https://s2.ax1x.com/2019/12/09/QwRL8I.png" alt="QwRL8I.png"></p>
+<h4 id="EL逻辑运算符"><a href="#EL逻辑运算符" class="headerlink" title="EL逻辑运算符"></a>EL逻辑运算符</h4><ul>
+<li>Empty运算符： 判断一个值是否为null   –&gt; ture</li>
+</ul>
+<h4 id="EL表达式的隐式对象"><a href="#EL表达式的隐式对象" class="headerlink" title="EL表达式的隐式对象"></a>EL表达式的隐式对象</h4><ul>
+<li><p>作用域访问对象</p>
+<ul>
+<li>pageScope</li>
+<li>requestScope</li>
+<li>sessionScope</li>
+<li>applicationScope</li>
+</ul>
+</li>
+<li><p>参数访问对象（获取表单数据）</p>
+<ul>
+<li><p>request.getParameter()</p>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;param.name的值&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>request.getParameterValues()</p>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;paramValues.name的值&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>JSP隐式对象</p>
+<ul>
+<li><p>pageContext</p>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;pageContext.方法名去掉()和get,并且首字母小写&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="post-copyright"><div class="post-copyright-author"><span class="post-copyright-meta">本文作者: </span><span class="post-copyright-info"><a href="mailto:undefined">何帮安</a></span></div><div class="post-copyright-type"><span class="post-copyright-meta">本文链接: </span><span class="post-copyright-info"><a href="https://hebangan.github.io/2019/12/09/JavaWeb/EL表达语法/">https://hebangan.github.io/2019/12/09/JavaWeb/EL表达语法/</a></span></div><div class="post-copyright-notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://hebangan.github.io">何帮安的博客</a>！</span></div></div></article><div id="pagination"><div class="prev-post pull-left"><span class="line line-top"></span><span class="line line-right"></span><span class="line line-bottom"></span><span class="line line-left"></span><a href="/2019/12/09/JavaWeb/JSTL基础及set、out、remove/"><i class="fas fa-angle-left">&nbsp;</i><span>40.40JSTL基础及set、out、remove</span></a></div><div class="next-post pull-right"><span class="line line-top"></span><span class="line line-right"></span><span class="line line-bottom"></span><span class="line line-left"></span><a href="/2019/12/08/JavaWeb/上传与下载/"><span>36.36上传与下载</span><span>&nbsp;</span><i class="fas fa-angle-right"></i></a></div></div><!--div!= paginator()--></div></div><div class="button-hover" id="return-top"><i class="fas fa-arrow-up" aria-hidden="true"></i></div><footer><div id="footer"><div class="button-hover" id="side-button"><i class="fas fa-arrow-right"></i></div><div class="right-content"><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fas fa-file-o"></i></span><span id="busuanzi_value_page_pv"></span><span></span></div><div class="copyright">&copy;2018 ～ 2019 By 何帮安</div></div></div></footer></div><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/jquery-3.3.1.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/velocity.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/jquery.mCustomScrollbar.concat.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/fan.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/canvas_bg.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/utils.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/scroll.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/sidebar.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/copy.js"></script><!--script(src=url)--></body></html>
