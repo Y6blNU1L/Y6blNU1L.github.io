@@ -16,7 +16,65 @@ if (isPassword) {
     error: '复制错误',
     noSupport: '浏览器不支持'
   }
-}</script></head><body><canvas id="universe"></canvas><!--#body--><div id="sidebar"><div class="author-info"><div class="author-info-avatar"><img class="author-info-avatar-img" src="/avatar.png"></div><div class="author-info-name">何帮安</div><div class="author-info-description">给她一个幸福的将来。</div><div class="links-buttons"><a class="links-button button-hover" href="https://github.com/hebangan" target="_blank">GitHub<i class="icon-dot bg-color7"></i></a><a class="links-button button-hover" href="mailto:1820500218@qq.com" target="_blank">E-Mail<i class="icon-dot bg-color3"></i></a><a class="links-button button-hover" href="tencent://message/?uin=1820500218&amp;Site=&amp;Menu=yes" target="_blank">QQ<i class="icon-dot bg-color10"></i></a></div><div class="author-info-articles"><a class="author-info-articles-archives article-meta" href="/archives"><span class="pull-top">日志</span><span class="pull-bottom">51</span></a><a class="author-info-articles-tags article-meta" href="/tags"><span class="pull-top">标签</span><span class="pull-bottom">15</span></a></div></div></div><div id="main-container"><header><div id="menu-outer"><i class="menu-list-icon fas fa-bars"></i><nav id="menu-inner"><a class="menu-item" href="/">首页</a><a class="menu-item" href="/tags">标签</a><a class="menu-item" href="/categories">分类</a><a class="menu-item" href="/archives">归档</a><a class="menu-item" href="/about">关于</a></nav><div class="right-info"><a class="title-name" href="/">何帮安的博客</a><span id="now-time"></span></div></div></header><div id="content-outer"><div id="content-inner"><div id="recent-posts"><!-- each post in page.posts.sort('date', -1).limit(10).toArray()--><!-- config中配置按照什么排序--><div class="recent-post-item"><a class="post-title" href="/2019/11/13/JavaWeb/cookie补充说明及四种范围对象作用域域/">12.12cookie补充说明及四种范围对象作用域</a><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 更新于 2019-11-13</time><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/tags/JavaWeb/">JavaWeb</a></div></div><div class="post-content"><div class="main-content content"><h2 id="cookie补充说明及四种范围对象作用域"><a href="#cookie补充说明及四种范围对象作用域" class="headerlink" title="cookie补充说明及四种范围对象作用域"></a>cookie补充说明及四种范围对象作用域</h2><p>客户端在第一次请求服务端时，如果服务端发现此请求没有JSESSIONID，则会创建一个name=SESIONID的cookie，并返回客户端</p>
+}</script></head><body><canvas id="universe"></canvas><!--#body--><div id="sidebar"><div class="author-info"><div class="author-info-avatar"><img class="author-info-avatar-img" src="/avatar.png"></div><div class="author-info-name">何帮安</div><div class="author-info-description">给她一个幸福的将来。</div><div class="links-buttons"><a class="links-button button-hover" href="https://github.com/hebangan" target="_blank">GitHub<i class="icon-dot bg-color5"></i></a><a class="links-button button-hover" href="mailto:1820500218@qq.com" target="_blank">E-Mail<i class="icon-dot bg-color7"></i></a><a class="links-button button-hover" href="tencent://message/?uin=1820500218&amp;Site=&amp;Menu=yes" target="_blank">QQ<i class="icon-dot bg-color2"></i></a></div><div class="author-info-articles"><a class="author-info-articles-archives article-meta" href="/archives"><span class="pull-top">日志</span><span class="pull-bottom">54</span></a><a class="author-info-articles-tags article-meta" href="/tags"><span class="pull-top">标签</span><span class="pull-bottom">16</span></a></div></div></div><div id="main-container"><header><div id="menu-outer"><i class="menu-list-icon fas fa-bars"></i><nav id="menu-inner"><a class="menu-item" href="/">首页</a><a class="menu-item" href="/tags">标签</a><a class="menu-item" href="/categories">分类</a><a class="menu-item" href="/archives">归档</a><a class="menu-item" href="/about">关于</a></nav><div class="right-info"><a class="title-name" href="/">何帮安的博客</a><span id="now-time"></span></div></div></header><div id="content-outer"><div id="content-inner"><div id="recent-posts"><!-- each post in page.posts.sort('date', -1).limit(10).toArray()--><!-- config中配置按照什么排序--><div class="recent-post-item"><a class="post-title" href="/2019/11/14/JavaWeb/JDBC原理及使用Statement访问数据库/">13.13JDBC原理及使用Statement访问数据库</a><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 更新于 2019-11-15</time><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/tags/JavaWeb/">JavaWeb</a></div></div><div class="post-content"><div class="main-content content"><h2 id="JDBC原理及使用Statement访问数据库"><a href="#JDBC原理及使用Statement访问数据库" class="headerlink" title="JDBC原理及使用Statement访问数据库"></a>JDBC原理及使用Statement访问数据库</h2><p>JDBC : Java DateBase Connectivity</p>
+<p>可以为多种关系型数据库DBMS提供统一的访问方式，用Java来操作数据库</p>
+<h3 id="JDBC架构"><a href="#JDBC架构" class="headerlink" title="JDBC架构"></a>JDBC架构</h3><p><img src="https://s2.ax1x.com/2019/11/14/MYfrgP.jpg" alt="MYfrgP.jpg"></p>
+<h3 id="JDBC-API"><a href="#JDBC-API" class="headerlink" title="JDBC API"></a>JDBC API</h3><p><img src="https://s2.ax1x.com/2019/11/14/MYfovV.jpg" alt="MYfovV.jpg"></p>
+<p>具体通过一下类、接口实现：</p>
+<ul>
+<li>DriverManager ：管理jdbc驱动</li>
+<li>Connection ：连接    (通过DriverManager产生)</li>
+<li>Statement （PreparedStatement）：增删改查     （通过Connection产生）</li>
+<li>CallableStatement ：调用数据库中的存储过程/存储函数    （通过Connection产生）</li>
+<li>Result : 返回的结果集   （通过Statement 产生）</li>
+</ul>
+<h3 id="jdbc访问数据库的基本步骤"><a href="#jdbc访问数据库的基本步骤" class="headerlink" title="jdbc访问数据库的基本步骤"></a>jdbc访问数据库的基本步骤</h3><ul>
+<li>导入驱动，加载具体的驱动类</li>
+<li>与数据库连接</li>
+<li>发送sql，执行</li>
+<li>处理结果集</li>
+</ul>
+<h3 id="数据库驱动"><a href="#数据库驱动" class="headerlink" title="数据库驱动"></a>数据库驱动</h3><p><img src="https://s2.ax1x.com/2019/11/14/MY4mFJ.jpg" alt="MY4mFJ.jpg"></p>
+<p><img src="https://s2.ax1x.com/2019/11/14/MYoUfJ.jpg" alt="MYoUfJ.jpg"></p>
+<p><img src="https://s2.ax1x.com/2019/11/14/MYorm6.jpg" alt="MYorm6.jpg"></p>
+<h3 id="代码实例"><a href="#代码实例" class="headerlink" title="代码实例"></a>代码实例</h3><p><img src="https://s2.ax1x.com/2019/11/14/MtintH.jpg" alt="MtintH.jpg"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">jdbcDemo</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String URL = <span class="string">"jdbc:mysql://localhost:3306/hba"</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String USER = <span class="string">"root"</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String PWD = <span class="string">"123456"</span>;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">updata</span><span class="params">()</span> <span class="keyword">throws</span> ClassNotFoundException, SQLException </span>&#123;</span><br><span class="line">		Statement stmt = <span class="keyword">null</span>;</span><br><span class="line">		Connection connection = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			Class.forName(<span class="string">"com.mysql.cj.jdbc.Driver"</span>);<span class="comment">// 加载驱动类</span></span><br><span class="line">			connection = DriverManager.getConnection(URL, USER, PWD);</span><br><span class="line">			stmt = connection.createStatement();</span><br><span class="line">			<span class="comment">// 增加数据库</span></span><br><span class="line">			<span class="comment">// String sql="insert into student value ('王伟',18)";</span></span><br><span class="line">			<span class="comment">// 删除数据库</span></span><br><span class="line">			<span class="comment">// String sql = "delete from student where uage=19";</span></span><br><span class="line">			<span class="comment">// 更改数据库</span></span><br><span class="line">			String sql = <span class="string">"update student set uname='aaa' where  uage=18  "</span>;</span><br><span class="line">			<span class="keyword">int</span> count = stmt.executeUpdate(sql);</span><br><span class="line">			<span class="keyword">if</span> (count &gt; <span class="number">0</span>) &#123;</span><br><span class="line">				System.out.println(<span class="string">"操作成功！"</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				<span class="keyword">if</span> (stmt != <span class="keyword">null</span>)</span><br><span class="line">					stmt.close();</span><br><span class="line">				<span class="keyword">if</span> (connection != <span class="keyword">null</span>)</span><br><span class="line">					connection.close();</span><br><span class="line">			&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ClassNotFoundException, SQLException </span>&#123;</span><br><span class="line">		updata();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果运行出现<code>The server time zone value &#39;ÖÐ¹ú±ê×¼Ê±¼ä&#39; is unrec</code> 错误，解决方法：</p>
+<p><img src="https://s2.ax1x.com/2019/11/14/MtCOde.jpg" alt="MtCOde.jpg"></p>
+</div></div><a class="button-hover more" href="/2019/11/14/JavaWeb/JDBC原理及使用Statement访问数据库/#more">阅读全文</a></div><div class="recent-post-item"><a class="post-title" href="/2019/11/13/Ajax/Ajax实现步骤/">2.2Ajax实现步骤</a><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 更新于 2019-11-13</time><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/tags/Ajax/">Ajax</a></div></div><div class="post-content"><div class="main-content content"><h2 id="Ajax实现步骤"><a href="#Ajax实现步骤" class="headerlink" title="Ajax实现步骤"></a>Ajax实现步骤</h2><p>1.创建Ajax对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var xhr=new XMLHttpRequest();</span><br></pre></td></tr></table></figure>
+
+<p>2.Ajax请求地址以及请求方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.open(&apos;get&apos;,&apos;地址&apos;);</span><br></pre></td></tr></table></figure>
+
+<p>3.发送请求</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.send();</span><br></pre></td></tr></table></figure>
+
+<p>4.获取服务器给客户端的响应数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xhr.onload=function()&#123;</span><br><span class="line">	consloe.log(xhr.responseText);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>5.开启node服务器</p>
+</div></div><a class="button-hover more" href="/2019/11/13/Ajax/Ajax实现步骤/#more">阅读全文</a></div><div class="recent-post-item"><a class="post-title" href="/2019/11/13/Ajax/Ajax基本概念与原理/">1.1Ajax基本概念与原理</a><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 更新于 2019-11-13</time><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/tags/Ajax/">Ajax</a></div></div><div class="post-content"><div class="main-content content"><h2 id="Ajax基本概念与原理"><a href="#Ajax基本概念与原理" class="headerlink" title="Ajax基本概念与原理"></a>Ajax基本概念与原理</h2><h3 id="传统网站穿在的问题"><a href="#传统网站穿在的问题" class="headerlink" title="传统网站穿在的问题"></a>传统网站穿在的问题</h3><ul>
+<li>页面加载时间长</li>
+<li>提交表单若有错需要重新填写所有内有</li>
+<li>页面跳转，重新加载页面，造成资源浪费，增加用户的是等待时间</li>
+</ul>
+<h3 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h3><p>它是浏览器提供的一套方法，可以实现页面不需要刷新的情况下从而达到更新数据的功能，提高用户浏览网页的体验。</p>
+<h3 id="Ajax应用场景"><a href="#Ajax应用场景" class="headerlink" title="Ajax应用场景"></a>Ajax应用场景</h3><ul>
+<li>页面上拉加载更多数据</li>
+<li>列表数据不需要刷新分页</li>
+<li>表单离开焦点数据验证</li>
+<li>搜索框提示文字下拉列表</li>
+</ul>
+<h3 id="Ajax运行环境"><a href="#Ajax运行环境" class="headerlink" title="Ajax运行环境"></a>Ajax运行环境</h3><ul>
+<li><p>需要运行在网站环境中才能生效，例如使用Node创建的服务器作为网站服务器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localhost:3000</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="Ajax运行原理"><a href="#Ajax运行原理" class="headerlink" title="Ajax运行原理"></a>Ajax运行原理</h3><p><img src="https://s2.ax1x.com/2019/11/13/MGMsQH.jpg" alt="MGMsQH.jpg"></p>
+</div></div><a class="button-hover more" href="/2019/11/13/Ajax/Ajax基本概念与原理/#more">阅读全文</a></div><div class="recent-post-item"><a class="post-title" href="/2019/11/13/JavaWeb/cookie补充说明及四种范围对象作用域域/">12.12cookie补充说明及四种范围对象作用域</a><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 更新于 2019-11-13</time><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/tags/JavaWeb/">JavaWeb</a></div></div><div class="post-content"><div class="main-content content"><h2 id="cookie补充说明及四种范围对象作用域"><a href="#cookie补充说明及四种范围对象作用域" class="headerlink" title="cookie补充说明及四种范围对象作用域"></a>cookie补充说明及四种范围对象作用域</h2><p>客户端在第一次请求服务端时，如果服务端发现此请求没有JSESSIONID，则会创建一个name=SESIONID的cookie，并返回客户端</p>
 <p><strong>Cookie：不是内置对象，要使用必须new，但是服务端会自动生成一个name=SESIONID的cookie</strong></p>
 <hr>
 <p>四种范围对象作用域参考第5.5篇文章！</p>
@@ -130,94 +188,4 @@ if (isPassword) {
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在jsp页面内加入：request.setCharacterEncoding(&quot;UTF-8&quot;);</span><br></pre></td></tr></table></figure>
 
-</div></div><a class="button-hover more" href="/2019/11/09/JavaWeb/使用request对象实现注册实例，请求方式的编码问题/#more">阅读全文</a></div><div class="recent-post-item"><a class="post-title" href="/2019/10/02/JavaWeb/JSP页面元素以及request对象/">5.5JSP页面元素以及request对象</a><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 更新于 2019-11-13</time><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/tags/JavaWeb/">JavaWeb</a></div></div><div class="post-content"><div class="main-content content"><h2 id="JSP页面元素以及request对象"><a href="#JSP页面元素以及request对象" class="headerlink" title="JSP页面元素以及request对象"></a>JSP页面元素以及request对象</h2><h3 id="JSP页面元素"><a href="#JSP页面元素" class="headerlink" title="JSP页面元素"></a>JSP页面元素</h3><h4 id="a-脚本Scriptlet"><a href="#a-脚本Scriptlet" class="headerlink" title="a.脚本Scriptlet"></a>a.脚本Scriptlet</h4><ul>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;%</span><br><span class="line">	//局部变量、java语句</span><br><span class="line">	String name=&quot;zhangshan&quot;;</span><br><span class="line">	out.print(&quot;hello...&quot;+name);</span><br><span class="line">&lt;%</span><br></pre></td></tr></table></figure>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;%!</span><br><span class="line">	//全部变量、定义方法</span><br><span class="line">	public String bookName;</span><br><span class="line">	public void init()&#123;</span><br><span class="line">		bookName=&quot;java书&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;%</span><br></pre></td></tr></table></figure>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;%=</span><br><span class="line">	输出表达式</span><br><span class="line">&lt;%</span><br></pre></td></tr></table></figure>
-
-<p><strong>修改web.xml、配置文件、java需要重启tomcat服务,但是如果修改JSP\HTML\CSS\JS 不需要重启，out.println()不能回车，要想回车,加“<br>”</strong></p>
-</li>
-</ul>
-<h4 id="b-指令"><a href="#b-指令" class="headerlink" title="b.指令"></a>b.指令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">page指令</span><br><span class="line">&lt;% @page ....%&gt;</span><br><span class="line">page指定属性：</span><br><span class="line">language：jsp页面使用的脚本语言</span><br><span class="line">import：导入类</span><br><span class="line">pageEncoding：jsp文件自身编码  jsp——&gt;java</span><br><span class="line">contentType:浏览器解析jsp的编码</span><br><span class="line">&lt;% @page language=&quot;java&quot; contentType=&quot;text/html&quot; charset=UTF-8 </span><br><span class="line">	pageEncoding=&quot;UTF-8&quot; import=&quot;java.util.....&quot; %&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="c-注释"><a href="#c-注释" class="headerlink" title="c.注释"></a>c.注释</h4><ul>
-<li>html      &lt;！—   —-&gt;</li>
-<li>java        //    /<strong>….</strong>/</li>
-<li>jsp    &lt;% —  —%&gt;</li>
-</ul>
-<h3 id="JSP九大内置对象"><a href="#JSP九大内置对象" class="headerlink" title="JSP九大内置对象"></a>JSP九大内置对象</h3><p>自带的，不需要new也能使用</p>
-<ul>
-<li><p><strong>out</strong> ：输出对象，向客户端输出内容</p>
-</li>
-<li><p><strong>pageContext</strong>  ：JSP页面容器   </p>
-</li>
-<li><p><strong>request</strong>：请求对象；存储“客户端向服务端发送的请求信息”      </p>
-<p>request对象常见方法：</p>
-<blockquote>
-<p>String getParameter (String name)  :根据请求的字段名key，返回字段值value</p>
-</blockquote>
-<blockquote>
-<p>String [] getParameterValues ( String name ): 根据请求的字段名key，返回多个字段value</p>
-</blockquote>
-<blockquote>
-<p>void setCharacterEncoding (“编码格式UTF-8” )</p>
-</blockquote>
-<blockquote>
-<p>getRequestDispatcher(“b.jsp”).forward(request,response)     请求转发跳转页面   A–&gt;B</p>
-</blockquote>
-<blockquote>
-<p>getServerContext()  获取项目的ServletContext 对象</p>
-</blockquote>
-</li>
-<li><p>*<em>response *</em>  ：响应对象</p>
-</li>
-<li><p><strong>session</strong>  ：会话对象   </p>
-</li>
-<li><p><strong>application</strong>    ：全局对象   </p>
-</li>
-<li><p><strong>config</strong>  ：配置对象（服务配置信息）</p>
-</li>
-<li><p><strong>page</strong>   ：当前JSP页面对象（相当于java中的this）</p>
-</li>
-<li><p><strong>exception</strong>   ：异常对象</p>
-</li>
-</ul>
-<blockquote>
-<p><strong>四种范围对象（小—&gt;大）</strong>    尽量使用最小范围</p>
-</blockquote>
-<ul>
-<li>pageContext     当前页面有效（页面跳转后无效）</li>
-<li>request     同一次请求有效；其他请求无效（请求转发后有效；重定向后无效）</li>
-<li>session    同一次会话有效 （无论怎么跳转，都有效；关闭/切换浏览器后无效）</li>
-<li>application    全局有效;整个项目运行期间都有效（切换浏览器仍然有效）</li>
-</ul>
-<p>以上四个共有的方法：</p>
-<ul>
-<li>Object getAttribute(String name) :根据属性名，或者属性值</li>
-<li>void setAttribute(String name ,Object obj)  :  设置属性值（新增，修改）</li>
-<li>void removeAttribute(String name) ：根据属性名，删除对象</li>
-</ul>
-<hr>
-</div></div><a class="button-hover more" href="/2019/10/02/JavaWeb/JSP页面元素以及request对象/#more">阅读全文</a></div><div class="recent-post-item"><a class="post-title" href="/2019/09/18/JavaWeb/Eclipse开发JSP/">4.4Eclipse开发JSP</a><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 更新于 2019-09-18</time><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/tags/JavaWeb/">JavaWeb</a></div></div><div class="post-content"><div class="main-content content"><h2 id="Eclipse开发JSP"><a href="#Eclipse开发JSP" class="headerlink" title="Eclipse开发JSP"></a>Eclipse开发JSP</h2><h3 id="在Eclipse中创建Web项目"><a href="#在Eclipse中创建Web项目" class="headerlink" title="在Eclipse中创建Web项目"></a>在Eclipse中创建Web项目</h3><h4 id="访问方式"><a href="#访问方式" class="headerlink" title="访问方式"></a>访问方式</h4><p>在浏览器中可以直接访问WebContent中的文件，</p>
-<p>例如localhost:8080/MyJspProject/index.jsp,</p>
-<p>其中的index.jsp就在WebContent目录中,</p>
-<p>但是WEB-INF中的文件无法通过客户端（浏览器）直接访问,</p>
-<p>只能通过请求转发来访问。</p>
-<p><strong>注意：并不是任何的内部跳转都能访问WEB-INF；原因是跳转有两种方式：请求转发和重定向</strong></p>
-<h4 id="配置tomcat运行时的环境"><a href="#配置tomcat运行时的环境" class="headerlink" title="配置tomcat运行时的环境"></a>配置tomcat运行时的环境</h4><p>jsp&lt;—&gt;servlet</p>
-<p><strong>a.将tomcat/lib中的servlet-api.jar到构件路径</strong></p>
-<p><strong>b. 右键项目 –&gt;Build Path –&gt;Add library –&gt;Server Runtime</strong></p>
-<h4 id="统一字符集编码"><a href="#统一字符集编码" class="headerlink" title="统一字符集编码"></a>统一字符集编码</h4><p>a.编码分类：</p>
-<p>设置jsp文件的编码（jsp文件的pageEncoding属性）： jsp–&gt;java</p>
-<p>设置浏览器读取jsp文件的编码（jsp中的content属性）</p>
-<p><strong>一般统一编码UTF-8</strong></p>
-<p>b.文本编码：</p>
-<p><strong>将整个Eclipse中的文件统一设置</strong></p>
-</div></div><a class="button-hover more" href="/2019/09/18/JavaWeb/Eclipse开发JSP/#more">阅读全文</a></div><div class="recent-post-item"><a class="post-title" href="/2019/09/18/JavaWeb/JSP执行流程/">3.3JSP执行流程</a><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 更新于 2019-09-18</time><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/tags/JavaWeb/">JavaWeb</a></div></div><div class="post-content"><div class="main-content content"><h2 id="JSP执行流程"><a href="#JSP执行流程" class="headerlink" title="JSP执行流程"></a>JSP执行流程</h2><p>第一次访问：</p>
-<p><strong>JSP —&gt;  JAVA  —&gt;  CLASS</strong></p>
-<p>第二次访问：</p>
-<p><strong>直接访问class文件（如果服务端代码修改，将会重新编译）</strong> </p>
-<p>JSP和Servlet可以相互转换</p>
-</div></div><a class="button-hover more" href="/2019/09/18/JavaWeb/JSP执行流程/#more">阅读全文</a></div></div><div id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/"><i class="fas fa-angle-right"></i></a></div></div></div></div><div class="button-hover" id="return-top"><i class="fas fa-arrow-up" aria-hidden="true"></i></div><footer><div id="footer"><div class="button-hover" id="side-button"><i class="fas fa-arrow-right"></i></div><div class="right-content"><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_uv"><i class="fas fa-user"></i></span><span id="busuanzi_value_site_uv"></span><span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv"><i class="fas fa-eye"></i></span><span id="busuanzi_value_site_pv"></span><span></span></div><div class="copyright">&copy;2018 ～ 2020 By 何帮安</div></div></div></footer></div><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/jquery-3.3.1.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/velocity.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/jquery.mCustomScrollbar.concat.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/fan.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/canvas_bg.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/utils.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/scroll.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/sidebar.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/copy.js"></script><!--script(src=url)--></body></html>
+</div></div><a class="button-hover more" href="/2019/11/09/JavaWeb/使用request对象实现注册实例，请求方式的编码问题/#more">阅读全文</a></div></div><div id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/"><i class="fas fa-angle-right"></i></a></div></div></div></div><div class="button-hover" id="return-top"><i class="fas fa-arrow-up" aria-hidden="true"></i></div><footer><div id="footer"><div class="button-hover" id="side-button"><i class="fas fa-arrow-right"></i></div><div class="right-content"><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_uv"><i class="fas fa-user"></i></span><span id="busuanzi_value_site_uv"></span><span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv"><i class="fas fa-eye"></i></span><span id="busuanzi_value_site_pv"></span><span></span></div><div class="copyright">&copy;2018 ～ 2020 By 何帮安</div></div></div></footer></div><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/jquery-3.3.1.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/velocity.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/jquery.mCustomScrollbar.concat.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/fan.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/canvas_bg.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/utils.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/scroll.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/sidebar.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/copy.js"></script><!--script(src=url)--></body></html>
