@@ -12,11 +12,11 @@ var CanvasParticle = (function() {
         // var html = getElementByTag('html')[0];
         // 获取body作为背景
         // var body = getElementByTag('body')[0];
-        var body = document.getElementsByTagName('body')[0];
+        // var body = document.getElementsByTagName('body')[0];
 
         // 获取特定div作为背景
         // mydiv是你想要将其作为背景的div的ID
-        // var body = document.getElementById("mydiv");
+        var body = document.getElementById('main-container');
         var canvasObj = document.createElement('canvas');
 
         var canvas = {
@@ -214,3 +214,21 @@ var CanvasParticle = (function() {
     }
     return canvasInit;
 })();
+
+window.onload = function() {
+    //配置
+    var config = {
+        vx: 4, //小球x轴速度,正为右，负为左
+        vy: 4, //小球y轴速度
+        height: 2, //小球高宽，其实为正方形，所以不宜太大
+        width: 2,
+        count: 200, //点个数
+        color: '121, 162, 185', //点颜色
+        stroke: '130,255,255', //线条颜色
+        dist: 6000, //点吸附距离
+        e_dist: 20000, //鼠标吸附加速距离
+        max_conn: 10, //点到点最大连接数
+    };
+    //调用
+    CanvasParticle(config);
+};
