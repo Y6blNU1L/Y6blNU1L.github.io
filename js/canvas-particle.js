@@ -76,8 +76,8 @@ var CanvasParticle = (function() {
         // canvas.height = window.innerWeight || document.documentElement.clientHeight || document.body.clientHeight;
 
         // 获取特定div的宽高
-        var width = document.getElementById('mydiv').style.width;
-        var height = document.getElementById('mydiv').style.height;
+        var width = document.getElementById('main-container').style.width;
+        var height = document.getElementById('main-container').style.height;
         width = parseInt(width);
         height = parseInt(height);
         canvas.width =
